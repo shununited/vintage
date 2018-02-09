@@ -6562,3 +6562,118 @@ Processing by ToppagesController#index as HTML
 Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 10.240.0.187 at 2018-02-09 23:29:11 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ToppagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follow_id` WHERE `relationships`.`user_id` = 2[0m
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.0ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 2 ORDER BY created_at DESC LIMIT 25 OFFSET 0[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered favorites/_like_button.html.erb (1.0ms)
+  Rendered microposts/_microposts.html.erb (12.4ms)
+  Rendered toppages/index.html.erb within layouts/application (30.9ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 732ms (Views: 621.7ms | ActiveRecord: 9.8ms)
+
+
+Started DELETE "/logout" for 10.240.1.99 at 2018-02-09 23:29:19 +0000
+Cannot render console from 10.240.1.99! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wYGrfHR72M4Cm5UA3wzVnjyyFgM04+gE9ee3T+cEvczrOPOaf4W5NjJLjUQEaHCr9beghZUEi6qxUx63oF9lqA=="}
+Redirected to http://techacademy-shunmatsumura.c9users.io:8080/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.90 at 2018-02-09 23:29:20 +0000
+Cannot render console from 10.240.0.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered toppages/index.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.1.189 at 2018-02-09 23:31:06 +0000
+Cannot render console from 10.240.1.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered toppages/index.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (155.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 187ms (Views: 183.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.240.0.227 at 2018-02-09 23:31:11 +0000
+Cannot render console from 10.240.0.227! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (41.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (43.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 37.3ms | ActiveRecord: 41.0ms)
+
+
+Started POST "/login" for 10.240.0.90 at 2018-02-09 23:31:13 +0000
+Cannot render console from 10.240.0.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DkPcmw48DrAcNG8STur9mSY99Q82COAASUW/Si4vvqWDAUl/kpHxJ9L01dUU5CxTqh4hSEP5UHJvoE3KCWiSug==", "session"=>{"email"=>"matsumura1995062@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'matsumura1995062@gmail.com' LIMIT 1[0m
+Redirected to http://techacademy-shunmatsumura.c9users.io:8080/users/2
+Completed 302 Found in 74ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 10.240.0.227 at 2018-02-09 23:31:13 +0000
+Cannot render console from 10.240.0.227! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follow_id` WHERE `relationships`.`user_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`user_id` WHERE `relationships`.`follow_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `favorites` WHERE `favorites`.`user_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` INNER JOIN `favorites` ON `microposts`.`id` = `favorites`.`micropost_id` WHERE `favorites`.`user_id` = 2[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered relationships/_follow_button.html.erb (0.9ms)
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 2 ORDER BY created_at DESC LIMIT 25 OFFSET 0[0m
+  Rendered favorites/_like_button.html.erb (0.9ms)
+  Rendered microposts/_microposts.html.erb (6.7ms)
+  Rendered users/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 39.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/2" for 10.240.1.97 at 2018-02-09 23:31:19 +0000
+Cannot render console from 10.240.1.97! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follow_id` WHERE `relationships`.`user_id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`user_id` WHERE `relationships`.`follow_id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `favorites` WHERE `favorites`.`user_id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` INNER JOIN `favorites` ON `microposts`.`id` = `favorites`.`micropost_id` WHERE `favorites`.`user_id` = 2[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered relationships/_follow_button.html.erb (0.7ms)
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 2 ORDER BY created_at DESC LIMIT 25 OFFSET 0[0m
+  Rendered favorites/_like_button.html.erb (0.7ms)
+  Rendered microposts/_microposts.html.erb (6.3ms)
+  Rendered users/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 36.6ms | ActiveRecord: 1.6ms)
+
+
